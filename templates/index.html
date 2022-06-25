@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+        
+        body{
+            margin: 0%;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #818589;
+            
+            /* background-image: linear-gradient(to right, #EDAEF9, #81B1FA); */
+        }
+
+        /* INTRO PORTION */
+
+        .intro-image{ 
+            /* background-image: url('https://images.unsplash.com/photo-1485579149621-3123dd979885?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80'); */
+            /* background-image: url('https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG1pY3JvcGhvbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60'); */
+            background-image: url('https://images.unsplash.com/photo-1476136236990-838240be4859?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bWljcm9waG9uZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60');
+            /* background-image: url('https://lh3.googleusercontent.com/pw/AM-JKLXOX2rV10QMyDGCU57QMpITrOcW1g1ndja1_EVhzqrmjdf-n0t9F_kKVE3yJYEq5QqHM5HDKQpqvoh7ZjVA2DZ0Q_kdAJGQG78jBS7_utRabrR9RxyBUS_OvIku2m2bN5MJmc04Ai57Lc9O08vpJMMqyQ=w1258-h943-no?authuser=0'); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* height: 45vw; */
+            width: 50vw;
+            color: whitesmoke;
+            padding: 2vw;
+            flex: left;
+        }
+        .intro-grid{
+          display: flex;
+          height: 47vw;
+          /* background-color: #020C15 to #000A13; */
+          background-image: linear-gradient(rgb(2, 12, 21), rgb(0,10,19));
+          /* background-image: radial-gradient(rgb(0,10,19) 40%, rgb(2, 12, 21) 60%); */
+        }
+        .intro-container{
+          flex: left;
+          text-align: center;
+          /* margin: auto; */
+          margin: 5vw 0vw 0vw;
+        }
+
+        .intro-content{
+            width: 50vw;  
+            display: inline-block;
+            margin: 2vw 4.5vw 2.5vw ; /*top right botton*/
+            color: whitesmoke;
+        }
+        .intro-content p{font-size: 1.2vw; color: whitesmoke;}
+        .intro-content h3{font-size: 3.2vw;}
+
+        .get-started-btn{
+            text-decoration: none;
+            color: black;
+            background-color: whitesmoke;
+            border: 1px solid whitesmoke;
+            padding: 1vw 2vw 1vw;
+            font-size: 2vw;
+            font-weight: bold;
+            box-shadow: 1px 1px 2px #818589;
+        }
+        .get-started-btn:hover{background-color: #B0B3BC;color: black;}
+
+
+        .intro-btn-div{
+            /* margin-left: 17vw;
+            margin-top: 3vw; */
+            margin: auto;
+        }
+        
+        .dub-start{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* UPLOAD PORTION */
+        .form-fields{
+            background-color: whitesmoke;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10vw;
+            width: 55vw;
+            text-align: center;
+            padding: 5% 0% 5% 0% ;
+            box-shadow: 5px 5px 10px #818589;
+        
+            font-family: 'Montserrat', sans-serif;
+        }
+        .form-style{
+            padding:5%;
+        }
+
+        .upload-file-btn{
+            border: 1px solild black;
+        }
+        
+        .submit-btn{
+            color: whitesmoke;
+            background-color: #020C15;
+            padding: 1vw 2vw;
+            font-size: 1.5vw;
+            border-radius: 1vw;
+            border: none;
+        }
+        .submit-btn:hover{background-color: #B0B3BC;color: black;}
+
+        .radio-button{
+          list-style-type: none;
+          margin-top: 3vw;
+          display: inline-flex;
+        }
+        #radio_field-1{
+          margin-left: 2vw;
+        }
+        #radio_field-0{
+          margin-left: -1vw;
+        }
+
+        #dub-start{
+          /* background-image: url('https://thumbs.dreamstime.com/b/audio-waveform-vector-background-sound-wave-illustration-blue-digital-equalizer-waves-black-stereo-effect-signal-vertical-192958355.jpg'); */
+          /* opacity: 0.5; */
+          background-color: #818589;
+          text-align: center;
+          height: 40vw;
+        }
+        .no-show{
+          display: none;
+        }
+        .show{
+
+        }
+
+        /* NAVBAR PORTION */
+        
+        .topnav {
+            overflow: hidden;
+            background-color: #020C15;
+            /* 'opacity: 0;' */
+            /* background-image: linear-gradient(rgb(2, 12, 21), rgb(0,10,19)); */
+
+        }
+        .logo a{
+          position: sticky;
+          float: left;
+          display: block;
+          overflow: hidden;
+          background-color: #020C15;
+          color: whitesmoke;
+          text-decoration: none;
+          text-align: center;
+          padding: 20px 20px;
+          font-size: 20px;
+        }
+        
+        .logo.none{
+          display: none;
+        }
+          
+        .topnav a {
+          position: sticky;
+          float: right;
+          display: block;
+          /* color: #f2f2f2; */
+          color: whitesmoke;
+          text-align: center;
+          padding: 20px 20px;
+          text-decoration: none;
+          font-size: 20px;
+        }
+        .topnav .logo{
+          display: block;
+          float: left;
+          margin-left: 2vw;
+        }
+        
+        .topnav a:hover {
+          background-color: #333;
+          color: whitesmoke;
+        }
+
+        .topnav .icon{
+          display: none;
+        }
+        /* .topnav{
+          position: sticky;
+          top:0;
+        }
+        .logo{position: sticky;top:0;} */
+
+        /* HOW TO SECTION */
+        .how-to-container{
+          display: flex;
+          margin-bottom: 0;
+          height: 50vw;
+          /* background-color: #D9D9D9; */
+          /* background-image: linear-gradient(rgb(187, 187, 195),rgb(175, 178, 187)); */
+          background-color: #020C15;
+        }
+        .how-to-img{
+          background-image: url('https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'); 
+          background-repeat: no-repeat;
+          background-size:cover;
+          width: 60vw;
+          height: 40vw;
+          /* flex: right;
+          left: -25vw; */
+          margin-top: 5%;
+        
+   
+        }
+        .how-to-content{
+          display: flex;
+          flex-direction: column;
+          margin-top: 6%;
+          margin-left: 2%;
+        }
+
+        .single{
+          margin-top: 2%;
+        }
+
+        .step{
+          display: flex;
+          padding-top: 5%;
+        }
+        .step-desc{
+          color: whitesmoke;
+          text-align: start;
+        }
+
+        .step-num{
+          background-color: whitesmoke;
+          color: #020C15;
+          padding: 5% 7%;
+          border-radius: 50%;
+          text-align: center;
+          
+        }
+
+        /* GITHUB SECTION */
+        .github-container{height: 15vw;margin-top: 0%;border: 0;background-color: whitesmoke;}
+        .github-link{display: flex; justify-content: center;align-items: center;text-align: center;background-color: whitesmoke;}
+        .fa-github{flex: left; margin-right: 1.5vw;}
+        .project-link a{flex: left; color: whitesmoke; text-decoration: none; font-family:'Times New Roman', Times, serif;}
+        .github-container h2,p{text-align: center;color: #020C15;margin: 0;padding: 1vw;}
+        .github-link {margin:auto;width: 50%;background-color: #020C15;color: whitesmoke;padding: 3px 5px;border-radius: 15px;}
+        .github-container h2{background-color:whitesmoke;padding: 2vw 0;margin-top: 0vw;color: #020C15;}
+
+          
+          
+        @media screen and (max-width: 600px) {
+          /* .topnav a:not(:first-child) {display: none;} */
+          .topnav a{display: none;}
+          .topnav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+        
+        @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative; width: 100vw;}
+          .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+            color: whitesmoke;
+            font-size: 15px;
+            padding: 10px;
+          }
+          .how-to-img{display: none;}
+          .how-to-content{width: 100%; background-color: #B0B3BC;}
+
+        }
+
+        @media screen and (max-width: 800px){
+          .about-image{
+            display: none;
+          }
+          .about-content{
+            width: 80%;
+            font-size: 3.5vw;
+          }
+          .form-fields{font-size: 2vw; text-align: center;}
+          .upload-file-btn{display: flex;padding: 5px;}
+          .submit-btn{display: inline-block;
+            margin-top:2vw ;
+        }
+          .about-container{
+            margin: auto;
+            display: inline-block;
+          }
+          .about-grid{
+            width: 100%;
+            text-align: center;
+          }
+
+          .get-started-btn{
+            font-size: 3vw;
+          }
+
+          .github-container{height: 25vw;font-size: 2vw;}
+          /* .github-link{} */
+          
+        
+        }
+        
+    </style>
+</head>
+
+
+<body>
+  <!-- NAVBAR -->
+  <div class="logo" id="logo"><a href="#dubinc" >DubInc.</a></div>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#how-to">How To Use</a>
+    <a href="#github">Github</a>
+    <!-- <a href="#dubinc" class="logo" id="logo">DubInc.</a> -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+  <!-- INTRO PART -->
+  <div class='intro-grid'>
+
+    <div class="intro-image"></div>
+
+    <div class="intro-container">
+
+      <div class="intro-content">
+        <h3>Want to Dub Your English Video to Urdu?</h3>
+        <p>Well then what are you waiting for? Our automated dubbing system provides end-to-end dubbing of all your English videos so you can relax and learn in a language you understand. Click on the button below to get started. </p>
+      </div>
+
+      <div class="intro-btn-div"><a class='get-started-btn' href="#dub-start">Get Started</a></div>
+    
+    </div>
+
+  </div>
+
+  <!-- UPLOAD PART -->
+  <div id="dub-start">
+      <!-- <div id="loading"></div> -->
+      <div class="form-fields">
+          <h1>Upload File to Dub</h1>
+          <form method="POST" enctype='multipart/form-data' class="form-style">
+          
+              {{form.hidden_tag()}}
+              {{form.file(class_='upload-file-btn', id='upload-btn')}}
+              {{form.submit(class_='submit-btn' ,onclick='loading()')}}
+              {{form.radio_field(class_='radio-button')}}
+              <!-- <p><b>Please wait while your video is being dubbed. This may take a while.</b></p> -->
+
+          </form>
+      </div>
+  </div>
+
+  <!-- ABOUT/HOW IT WORKS -->
+  <div id="how-to" class="how-to-container">
+    <div class="how-to-img"></div>
+    <div class="how-to-content">
+      
+      <div class="step">
+        <p class="step-num">1</p>
+        <p class="step-desc">Select your file through the <i>choose file</i> button</p>
+      </div>
+
+      <div class="step ">
+        <p class="step-num">2</p>
+        <p class="step-desc single">Choose a model (API/Custom)</p>
+      </div>
+      
+      <div class="step ">
+        <p class="step-num">3</p>
+        <p class="step-desc single">Click on Upload Your File</p>
+      </div>
+
+      <div class="step">
+        <p class="step-num">4</p>
+        <p class="step-desc single">Wait while the magic happens!</p>
+      </div>
+
+      <div class="step">
+        <p class="step-num">5</p>
+        <p class="step-desc">You'll be taken to next page with the video. Enjoy!</p>
+      </div>
+
+     
+    </div>
+  </div>
+
+  <!-- GITHUB -->
+  <div id="github" class="github-container">
+    <h2>Find This Project on Github!</h2>
+    <p>To make collaboration on the system easier, the basic system code has been uploaded on Github, the link for which you can find below.</p>
+    <div class="github-link">
+      <i class="fa fa-github fa-2x"></i>
+      <!-- <img src="github.png" width="20px"> -->
+      <p class="project-link"><a href="#">https://github.com/ZainabIftikhar1204/Automated-Dubbing-System</a></p>
+    </div>
+  </div>
+  <!-- CONTACT US -->
+
+
+    
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+      var y = document.getElementById("logo")
+      // console.log("I am working")
+      // console.log(y)
+      if (y.className==="logo"){
+        y.className += " none"
+      }
+      console.log("AGH")
+      console.log(y.className)
+    }
+    function loading(){
+      var x= document.getElementById('dub-start')
+      if (x.className === "no-show"){
+        x.className = 'show'
+      }
+      else{
+        console.log('i am so not working')
+      }
+    }
+
+    
+      
+            
+    </script>
+</body>
+</html>
